@@ -1,17 +1,18 @@
 <template>
   <div class="container">
-  <product-detail :loadedItem="loadedItem"></product-detail>
+    <!-- use vue binding to attach the loaded item to ProductDetails props -->
+    <product-detail :loadedItem="loadedItem"></product-detail>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
-import ProductDetail from '../components/ProductDetail.vue'
+import ProductDetail from "../components/ProductDetail.vue";
 
 export default {
-  components:{
-    ProductDetail
+  components: {
+    ProductDetail,
   },
   computed: {
     ...mapGetters(["allFurniture"]),
@@ -20,7 +21,6 @@ export default {
       return this.allFurniture.find((item) => item.id == this.$route.params.id);
     },
   },
- 
 };
 </script>
 

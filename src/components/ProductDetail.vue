@@ -1,4 +1,5 @@
 <template>
+  <!-- Check to make sure item isnt null before loading. just to stop us from getting any errors on runtime -->
   <div
     class="card"
     style="width: 18rem;"
@@ -20,6 +21,7 @@
 <script>
 export default {
   props: {
+    // loaded item from furniture page
     loadedItem: Object,
   },
   methods: {
