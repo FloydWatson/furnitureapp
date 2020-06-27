@@ -1,6 +1,6 @@
 # furnitureapp
 
-Quick project made to help BBk understand how to get a variable with the id passed through Routes
+Quick project made to help BBK understand how to get a variable with the id passed through Routes
 
 ## Set Up
 
