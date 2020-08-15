@@ -1,42 +1,29 @@
 <template>
   <div class="container">
-    <div
-      v-for="item in allFurniture"
-      :key="item.id"
-      class="card"
-      style="width: 18rem;"
-    >
-      <div class="card-body">
-        <h5 class="card-title">
-          {{ item.name }}
-        </h5>
-        <p class="card-text">
-          Click on the button below to be pushed to item detail screen
-        </p>
-        <div>
-          <button class="btn btn-primary" @click="pushToItem(item.id)">
-            {{ item.name }}
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- <h2>HOME</h2> -->
+    <hello-world :msg="'Hello'"></hello-world>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import helloWorld from '../components/HelloWorld.vue';
 
 export default {
+  components:{  
+    helloWorld
+  },
+  data() {
+    return {
+      
+    };
+  },
   computed: {
-    ...mapGetters(["allFurniture"]),
+    ...mapGetters(["allDummyData"]),
+    
   },
   methods: {
-    pushToItem(id) {
-      // add the id to route
-      this.$router.push({
-        path: `/furniture-detail/${id}`,
-      });
-    },
+    
   },
 };
 </script>

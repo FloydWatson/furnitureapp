@@ -1,14 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import furniture from "./modules/furniture";
+import data from "./modules/data";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  // import your furniture module
+  // import your data module
   modules: {
-    furniture,
+    data,
   },
 });
 
